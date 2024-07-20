@@ -2,7 +2,7 @@ Code 1
 public class FactorFinder {
 
     public static void main(String[] args) {
-        int number = 28; // Example number
+        int number = 20; // Example number
         findFactors(number);
     }
 
