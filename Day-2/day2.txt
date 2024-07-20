@@ -1,0 +1,36 @@
+Code 1
+public class FactorFinder {
+
+    public static void main(String[] args) {
+        int number = 28; // Example number
+        findFactors(number);
+    }
+
+    public static void findFactors(int number) {
+        System.out.println("Factors of " + number + " are:");
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+Code 2
+public class StringReverser {
+
+    public static void main(String[] args) {
+        String originalString = "Hello, World!";
+        String reversedString = reverseString(originalString);
+        System.out.println("Original String: " + originalString);
+        System.out.println("Reversed String: " + reversedString);
+    }
+
+    public static String reverseString(String str) {
+        if (str == null || str.isEmpty()) {
+            return str;
+        }
+        StringBuilder reversed = new StringBuilder(str);
+        return reversed.reverse().toString();
+    }
+}
