@@ -1,0 +1,81 @@
+1) Write a java function for printing a smallest value,largest in a matrix.
+
+
+public class MatrixMinMax {
+    
+
+    public static void printMinMax(int[][] matrix) {
+        if (matrix == null || matrix.length == 0) {
+            System.out.println("The matrix is empty.");
+            return;
+        }
+
+        int minValue = matrix[0][0];
+        int maxValue = matrix[0][0];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < minValue) {
+                    minValue = matrix[i][j];
+                }
+                if (matrix[i][j] > maxValue) {
+                    maxValue = matrix[i][j];
+                }
+            }
+        }
+
+        System.out.println("Smallest value in the matrix: " + minValue);
+        System.out.println("Largest value in the matrix: " + maxValue);
+    }
+
+
+    public static void main(String[] args) {
+        // Example matrix
+        int[][] matrix = {
+            {3, 8, 1},
+            {14, 6, 9},
+            {2, 7, 5}
+        };
+
+
+        printMinMax(matrix);
+    }
+}
+
+
+
+2)Write a java function for printing fabonacchi series.
+
+
+public class FibonacciSeries {
+    
+    public static void printFibonacciSeries(int n) {
+        if (n <= 0) {
+            System.out.println("The number of terms must be positive.");
+            return;
+        }
+
+        int firstTerm = 0;
+        int secondTerm = 1;
+
+        System.out.print("Fibonacci Series: " + firstTerm);
+
+        if (n > 1) {
+            System.out.print(", " + secondTerm);
+        }
+
+        for (int i = 3; i <= n; i++) {
+            int nextTerm = firstTerm + secondTerm;
+            System.out.print(", " + nextTerm);
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+
+        System.out.println();
+    }
+    public static void main(String[] args) {
+
+        int numberOfTerms = 10;
+        printFibonacciSeries(numberOfTerms);
+    }
+}
